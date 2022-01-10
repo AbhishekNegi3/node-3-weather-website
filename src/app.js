@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express() ;
+const port = process.env.PORT || 3000
 
 //DEFINE PATH FOR EXPRESS CONFIG
 
@@ -79,6 +80,6 @@ app.get('*' , (req,res) => {
 
 
 
-app.listen(3000 , ()=>{
-    console.log('Server is up and running ')
+app.listen(port, ()=>{
+    console.log('Server is up on port ' + port )
 })
